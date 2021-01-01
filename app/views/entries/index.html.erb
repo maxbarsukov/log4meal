@@ -2,7 +2,7 @@
   Foodlog &ndash; <%= DateTime.now.to_s(:nice_date) %>
 <% end %>
 
-<div class="columns mt-6 is-centered">
+<div class="columns is-centered mt-6">
   <% @entries.each do |entry| %>
     <div class="column is-one-quarter">
       <div class="card">
@@ -26,4 +26,8 @@
       </div>
     </div>
   <% end %>
+</div>
+
+<div class="columns is-centered mt-6">
+  <%= link_to "View all entries", archives_index_path, class: "button is-link is-outlined is-centered" %>
 </div>
