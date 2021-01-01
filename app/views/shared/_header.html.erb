@@ -1,14 +1,12 @@
-<h1>My header</h1>
-
 <section class="hero is-link is-small">
   <!-- Hero head: will stick at the top -->
   <div class="hero-head">
-    <header class="navbar">
+    <nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
-          <a class="navbar-item">
-            <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
-          </a>
+          <% link_to root_path, class: "navbar-item" do %>
+            <span class="has-text-weight-bold is-size-4 ml-4">Foodlog</span>
+          <% end %>
           <span class="navbar-burger" data-target="navbarMenuHeroC">
             <span></span>
             <span></span>
@@ -23,7 +21,7 @@
           </div>
         </div>
       </div>
-    </header>
+    </nav>
   </div>
 
   <!-- Hero content: will be in the middle -->
