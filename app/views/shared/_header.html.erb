@@ -1,0 +1,41 @@
+<h1>My header</h1>
+
+<section class="hero is-link is-small">
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head">
+    <header class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
+          </a>
+          <span class="navbar-burger" data-target="navbarMenuHeroC">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroC" class="navbar-menu">
+          <div class="navbar-end">
+            <span class="navbar-item">
+              <%=link_to 'Create new entry', new_entry_path, class: 'button is-success' %>
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        <% if content_for :title %>
+          <%= yield :title %>
+        <% else %>
+          Foodlog
+        <% end %>
+      </h1>
+    </div>
+  </div>
+</section>
