@@ -3,6 +3,11 @@
 <% end %>
 
 <div class="columns is-multiline is-centered mt-6">
+  <% if @entries.empty? %>
+    <div class="is-centered has-text-weight-bold is-size-4">
+      No entries for today
+    </div>
+  <% end %>
   <% @entries.each do |entry| %>
     <div class="column is-one-quarter">
       <div class="card">

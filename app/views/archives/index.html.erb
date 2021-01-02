@@ -1,5 +1,10 @@
 <div class="columns is-centered mt-6">
   <div class="column is-half">
+    <% if @entries.empty? %>
+      <div class="is-centered has-text-weight-bold is-size-4">
+        No any entries
+      </div>
+    <% end %>
     <% @entries.each do |day, entries| %>
       <div class="panel">
       <h3 class="is-size-4 has-text-weight-bold mb-4 has-text-centered has-background-success has-text-grey-dark">
