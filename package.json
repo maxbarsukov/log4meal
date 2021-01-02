@@ -1,5 +1,5 @@
 {
-  "name": "foodlog",
+  "name": "log4meal",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",

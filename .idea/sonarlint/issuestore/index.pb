@@ -69,3 +69,13 @@ Q
 !app/views/shared/_header.html.erb,7/6/76d1a11ee1e940c5ee3f38422c24188edb0fe433
 O
 app/views/entries/show.html.erb,c/6/c6a3e1427d395b855aaf75a54fda937bb95a0a80
+K
+config/environments/test.rb,f/5/f52903eb564521c5ab86ad6edd6582a3b5f15b2f
+M
+app/helpers/entries_helper.rb,a/b/ab44f5d8e15808f4243a4904a085b5e474d33e41
+E
+config/environment.rb,3/2/32cf963bc694248c5a463e17894503af06f93fdd
+7
+Gemfile,d/e/de3150c01c3a946a6168173c4116741379fe3579
+Q
+!config/environments/production.rb,4/a/4a310e0d78d1faa88d49084f8149abd3441b1f25
