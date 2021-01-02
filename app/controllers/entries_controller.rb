@@ -1,10 +1,10 @@
 class EntriesController < ApplicationController
-  before_action :set_entry, only: [:show, :edit, :update, :destroy]
+  before_action :set_entry, only: %i[show edit update destroy]
 
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.all.where("created_at >= ?", Date.today)
+    @entries = Entry.all.where('created_at >= ?', Date.today)
   end
 
   # GET /entries/1
@@ -62,13 +62,13 @@ class EntriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_entry
-      @entry = Entry.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_entry
+    @entry = Entry.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def entry_params
-      params.require(:entry).permit(:meal_type, :calories, :proteins, :carbohydrates, :fats)
-    end
+  # Only allow a list of trusted parameters through.
+  def entry_params
+    params.require(:entry).permit(:meal_type, :calories, :proteins, :carbohydrates, :fats)
+  end
 end
