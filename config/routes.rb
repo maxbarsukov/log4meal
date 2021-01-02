@@ -15,6 +15,6 @@ Rails.application.routes.draw do
     get '/500', to: 'errors#internal_error'
     get '/502', to: 'errors#bad_gateway'
     get '/503', to: 'errors#service_unavailable'
-    get '/504', to: 'errors#service_gateway_timeout'
+    get '/504', to: 'errors#gateway_timeout'
   end
 end

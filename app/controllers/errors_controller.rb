@@ -59,7 +59,7 @@ class ErrorsController < ApplicationController
     end
   end
 
-  def service_gateway_timeout
+  def gateway_timeout
     respond_to do |format|
       format.html { render status: 504 }
     end
