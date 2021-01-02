@@ -12,41 +12,11 @@
         <div id="navbarMenuHeroC" class="navbar-menu">
           <div class="navbar-end">
             <span class="navbar-item mt-1">
-              <span class="is-size-3">
-                <% if user_signed_in? %>
-                  <%=link_to 'Create new entry', new_entry_path, class: 'button is-success' %>
-                <% else %>
-                  <%=link_to 'Create new entry', nil, class: 'button is-white is-outlined ' do %>
-                    <!-- TODO notification about authorization -->
-                  <% end %>
-                <% end %>
-
-                <div class="dropdown is-hoverable">
-                  <div class="dropdown-trigger">
-                    <button class="button is-success" aria-controls="dropdown-menu">
-                      <span>Account</span>
-
-                    </button>
-                  </div>
-                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-
-                      <div class="dropdown-item">
-                        <%= link_to 'Log In', new_user_session_path, class: "button is-grey-dark is-outlined is-fullwidth" %>
-                      </div>
-                      <hr class="dropdown-divider">
-                      <div class="dropdown-item">
-                        <%= link_to 'Sign Up', new_user_registration_path, class: "button is-success is-outlined is-fullwidth" %>
-                      </div>
-                      <hr class="dropdown-divider">
-                      <div class="dropdown-item">
-                        <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "button is-danger is-outlined is-fullwidth"  %>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
+              <span class="is-size-2">
+                <%=link_to 'Create new entry', new_entry_path, class: 'button is-success' %>
+                <%= link_to 'Log In', new_user_session_path, class: "button is-white is-outlined" %>
+                <%= link_to 'Sign Up', new_user_registration_path, class: "button is-success is-outlined" %>
+                <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "button is-danger is-outlined"  %>
               </span>
             </span>
           </div>
