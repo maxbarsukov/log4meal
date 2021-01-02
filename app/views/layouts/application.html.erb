@@ -13,9 +13,9 @@
   <body>
     <%= render 'shared/header' %>
 
-    <%= render 'layouts/notification_wrapper', notification_type: alert %>
+    <%= render 'layouts/notification', notification_type: alert %>
 
-    <%= render 'layouts/notification_wrapper', notification_type: notice %>
+    <%= render 'layouts/notification', notification_type: notice %>
 
     <div class="container">
       <%= yield %>
