@@ -13,17 +13,9 @@
   <body>
     <%= render 'shared/header' %>
 
-    <% if notice.present? %>
-      <div class="notification is-success is-light is-size-6">
-        <%= notice %>
-      </div>
-    <% end %>
+    <%= render 'layouts/notification_wrapper', notification_type: alert %>
 
-    <% if alert.present? %>
-      <div class="notification is-danger is-light is-size-6">
-        <%= alert %>
-      </div>
-    <% end %>
+    <%= render 'layouts/notification_wrapper', notification_type: notice %>
 
     <div class="container">
       <%= yield %>
