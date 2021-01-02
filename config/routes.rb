@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'archives/index'
 
-  resources :entries
+  get 'public/index'
   root to: 'entries#index'
 
+  resources :entries
+
+  # For error pages
   if Rails.env.production?
     get '/400', to: 'errors#bad_request'
     get '/401', to: 'errors#unauthorized'

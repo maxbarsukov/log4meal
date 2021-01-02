@@ -1,0 +1,13 @@
+<% if notification_type.present? %>
+  <% if notification_type == alert %>
+    <div class="notification is-danger is-light is-size-6">
+      <button class="delete button is-danger" onclick="this.parentElement.style.display='none'" ></button>
+      <%= notification_type %>
+    </div>
+  <% else %>
+    <div class="notification is-success is-light is-size-6">
+      <button class="delete button is-success" onclick="this.parentElement.style.display='none'" ></button>
+      <%= notification_type %>
+    </div>
+  <% end %>
+<% end %>
