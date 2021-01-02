@@ -2,12 +2,12 @@
   log4meal &ndash; <%= DateTime.now.to_s(:nice_date) %>
 <% end %>
 
-<div class="columns is-centered mt-6">
+<div class="columns is-multiline is-centered mt-6">
   <% @entries.each do |entry| %>
     <div class="column is-one-quarter">
       <div class="card">
         <header class="card-header">
-          <p class="card-header-title"><%= entry.meal_type %></p>
+          <p class="card-header-title has-text-grey-dark has-background-success"><%= entry.meal_type %></p>
         </header>
         <div class="card-content">
           <div class="content">
@@ -29,5 +29,5 @@
 </div>
 
 <div class="columns is-centered mt-6">
-  <%= link_to "View all entries", archives_index_path, class: "button is-link is-outlined is-centered" %>
+  <%= link_to "View all entries", archives_index_path, class: "button is-grey-dark is-outlined is-centered" %>
 </div>

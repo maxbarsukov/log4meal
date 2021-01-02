@@ -1,18 +1,13 @@
-<section class="hero is-link is-small">
+<section class="hero has-background-grey-dark is-small">
   <!-- Hero head: will stick at the top -->
   <div class="hero-head">
     <nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
           <%= link_to root_path, class: "navbar-item" do %>
-            <img src="logo.svg" alt="logo">
-            <span class="has-text-weight-bold is-size-4 ml-4">log4meal</span>
+            <%= image_tag "logo.svg", alt: "logo" %>
+            <span class="has-text-weight-bold is-size-4 ml-4 has-text-success">log4meal</span>
           <% end %>
-          <span class="navbar-burger" data-target="navbarMenuHeroC">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
         </div>
         <div id="navbarMenuHeroC" class="navbar-menu">
           <div class="navbar-end">
@@ -25,10 +20,9 @@
     </nav>
   </div>
 
-  <!-- Hero content: will be in the middle -->
   <div class="hero-body">
     <div class="container has-text-centered">
-      <h1 class="title">
+      <h1 class="title has-text-success">
         <% if content_for :title %>
           <%= yield :title %>
         <% else %>

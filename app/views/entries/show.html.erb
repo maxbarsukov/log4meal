@@ -2,10 +2,10 @@
   <%= @entry.meal_type %> &ndash; <%= DateTime.now.to_s(:nice_date) %>
 <% end %>
 
-<div class="columns mt-6 is-centered">
+<div class="columns mt-6 is-centered ">
   <div class="column is-one-third">
-    <nav class="panel is-link">
-      <p class="panel-heading">
+    <nav class="panel is-success">
+      <p class="panel-heading has-text-grey-dark">
         <%= @entry.meal_type %>
       </p>
 
@@ -30,7 +30,7 @@
       <div class="column">
         <%= link_to "Edit", edit_entry_path(@entry), class: "button is-gray" %>
         <%= link_to "Delete", entry_path(@entry), method: :delete, data: { confirm: "Are you sure?"}, class: "button is-grey" %>
-        <%= link_to "Back", entries_path, class: "button is-grey" %>
+        <%= link_to "Back", root_path, class: "button is-grey" %>
       </div>
     </div>
   </div>
