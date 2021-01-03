@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'archives/index'
 
-  get 'public/index'
-  root to: 'entries#index'
+  root to: 'about#index'
 
   resources :entries
 
