@@ -4,10 +4,12 @@
     <nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
-          <%= link_to root_path, class: "navbar-item" do %>
-            <%= image_tag "logo.svg", alt: "logo" %>
-            <span class="has-text-weight-bold is-size-4 ml-4 has-text-success">log4meal</span>
-          <% end %>
+          <div class="navbar-item">
+            <%= link_to root_path do %>
+              <%= image_tag "logo.svg", alt: "logo" %>
+              <span class="has-text-weight-bold is-size-4 ml-4 has-text-success">log4meal</span>
+            <% end %>
+          </div>
         </div>
         <div id="navbarMenuHeroC" class="navbar-menu">
           <div class="navbar-end">
