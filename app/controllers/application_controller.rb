@@ -3,9 +3,9 @@ class ApplicationController < ActionController::Base
 
   rescue_from CanCan::AccessDenied do |exception|
     if current_user
-      render :file => "#{Rails.root}/views/errors/unauthorized.html.erb", :status => 403, :layout => false
+      render file: "#{Rails.root}/views/errors/unauthorized.html.erb", status: 403, layout: false
     else
-      render :file => "#{Rails.root}/views/errors/unauthorized.html.erb", :status => 401, :layout => false
+      render file: "#{Rails.root}/views/errors/forbidden.html.erb", status: 401, layout: false
     end
   end
 
