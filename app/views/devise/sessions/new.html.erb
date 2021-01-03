@@ -4,26 +4,32 @@
 <div class="columns is-centered mt-6">
   <div class="column is-one-third">
     <h1 class="is-size-2 has-text-weight-bold mb-3">Log in</h1>
+
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
       <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <%= f.label :email, class: "label" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input" %>
       </div>
 
       <div class="field">
-        <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "current-password" %>
+        <%= f.label :password, class: "label" %>
+        <%= f.password_field :password, autocomplete: "current-password", class: "input" %>
       </div>
 
       <% if devise_mapping.rememberable? %>
         <div class="field">
-          <%= f.check_box :remember_me %>
+          <%= f.check_box :remember_me, class: "checkbox" %>
           <%= f.label :remember_me %>
         </div>
       <% end %>
 
-      <div class="actions">
-        <%= f.submit "Log in" %>
+      <div class="mt-6">
+        <span class="actions">
+          <%= f.submit "Log in", class: "button is-success" %>
+        </span>
+        <%= link_to "Back", :back, class: "button is-grey-dark is-outlined is-centered" %>
       </div>
     <% end %>
 
