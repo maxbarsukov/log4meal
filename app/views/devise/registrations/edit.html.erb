@@ -37,7 +37,7 @@
 
       <div class="mt-6">
         <span class="actions">
-          <%= f.submit "Sign up", class: "button is-success" %>
+          <%= f.submit "Update", class: "button is-success" %>
         </span>
         <%= link_to "Back", :back, class: "button is-grey-dark is-outlined is-centered" %>
       </div>
@@ -48,7 +48,7 @@
           <%= link_to "Cancel my account",
                       registration_path(resource_name),
                       data: { confirm: "Are you sure?" },
-                      method: :delete,
+                      #method: :delete,
                       class: "button is-danger" %>
           </div>
       </div>
