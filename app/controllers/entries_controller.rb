@@ -1,10 +1,13 @@
 class EntriesController < ApplicationController
+  load_and_authorize_resource
   before_action :set_entry, only: %i[show edit update destroy]
 
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.all.where('created_at >= ?', Date.today)
+    @entries = Entry.all
+                    .where('user_id >= ?', current_user.id)
+                    .where('created_at >= ?', Date.today)
   end
 
   # GET /entries/1
@@ -26,6 +29,7 @@ class EntriesController < ApplicationController
   def create
     @entry = Entry.new(entry_params)
     @entry.user_id = current_user.id
+
     respond_to do |format|
       if @entry.save
         format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
