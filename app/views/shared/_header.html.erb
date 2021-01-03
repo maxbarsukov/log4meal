@@ -15,11 +15,43 @@
               <span class="is-size-3">
                 <% if user_signed_in? %>
                   <%=link_to 'Create new entry', new_entry_path, class: 'button is-success' %>
-                  <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "button is-danger is-outlined"  %>
-                <% else %>
-                  <%= link_to 'Log In', new_user_session_path, class: "button is-white is-outlined is-full" %>
-                  <%= link_to 'Sign Up', new_user_registration_path, class: "button is-success is-outlined" %>
                 <% end %>
+
+                <div class="dropdown is-hoverable">
+                  <div class="dropdown-trigger">
+                    <button class="button is-success" aria-controls="dropdown-menu">
+                      <span>Account</span>
+                    </button>
+                  </div>
+
+                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                      <% if user_signed_in? %>
+
+                        <div class="dropdown-item">
+                          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "button is-danger is-outlined is-fullwidth"  %>
+                        </div>
+
+                        <hr class="dropdown-divider">
+                        <div class="dropdown-item">
+                          <%= link_to "Edit", edit_user_registration_path(@user), class: "button is-grey-dark is-outlined is-fullwidth"  %>
+                        </div>
+                      <% else %>
+
+                        <div class="dropdown-item">
+                          <%= link_to 'Log In', new_user_session_path, class: "button is-grey-dark is-outlined is-fullwidth" %>
+                        </div>
+
+                        <hr class="dropdown-divider">
+                        <div class="dropdown-item">
+                          <%= link_to 'Sign Up', new_user_registration_path, class: "button is-success is-outlined is-fullwidth" %>
+                        </div>
+
+                      <% end %>
+
+                    </div>
+                  </div>
+                </div>
               </span>
             </span>
           </div>
