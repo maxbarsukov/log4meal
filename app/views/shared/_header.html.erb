@@ -21,23 +21,31 @@
 
                 <div class="dropdown is-hoverable">
                   <div class="dropdown-trigger">
-                    <button class="button is-success" aria-controls="dropdown-menu">
-                      <span>Account</span>
+                    <button class="button is-success is-outlined is-inverted is-static" aria-controls="dropdown-menu">
+                      <span>
+                        <% if user_signed_in? %>
+                          <%= current_user.email %>
+                        <% else %>
+                          Account
+                        <% end %>
+                      </span>
                     </button>
                   </div>
 
                   <div class="dropdown-menu" id="dropdown-menu" role="menu">
                     <div class="dropdown-content">
+
                       <% if user_signed_in? %>
 
                         <div class="dropdown-item">
-                          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "button is-danger is-outlined is-fullwidth"  %>
+                          <%= link_to "Edit", edit_user_registration_path(@user), class: "button is-grey-dark is-outlined is-fullwidth"  %>
                         </div>
 
                         <hr class="dropdown-divider">
                         <div class="dropdown-item">
-                          <%= link_to "Edit", edit_user_registration_path(@user), class: "button is-grey-dark is-outlined is-fullwidth"  %>
+                          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "button is-danger is-outlined is-fullwidth"  %>
                         </div>
+
                       <% else %>
 
                         <div class="dropdown-item">
