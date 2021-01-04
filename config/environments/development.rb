@@ -42,15 +42,7 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default :charset => "utf-8"
 
-  config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 2525,
-    domain: "bk.ru",
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: "log4meal",
-    password: "**********"
-  }
+  config.action_mailer.smtp_settings = {:address => "localhost", :port => 1025}
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
