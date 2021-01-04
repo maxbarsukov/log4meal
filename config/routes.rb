@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'about/', to: 'about#inswx'
-  root to: 'about#index'
+  get '/main',   to: 'main#index'
+  get '/about', to: 'about#index'
+  root to: 'main#index'
   get 'archives/index'
 
   devise_for :users

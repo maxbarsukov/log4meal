@@ -5,27 +5,8 @@
   <div class="column is-half">
     <nav class="panel is-success">
       <div class="panel-heading is-size-1 has-text-weight-bold mb-4 has-text-centered has-background-success has-text-grey-dark">
-        Hi
-        <% if current_user %>
-          , <%= current_user.email %>
-        <% else %>
-        <% end %>!
+        About us
       </div>
-
-      <div class="card-content is-size-3 mb-4 has-text-weight-bold has-text-grey-dark">
-        <% if current_user %>
-          <div style="text-align: center" class="is-size-2">
-            You are logged in!<br>You can view your entries<br>
-            <%= link_to "Entries", entries_path, class: "button is-success is-large mt-6 is-fullwidth" %>
-          </div>
-        <% else %>
-          To start using our service, you need to&nbsp;
-          <%= link_to 'pass a simple registration', new_user_registration_path %>&nbsp;or&nbsp;
-          <%= link_to 'log in', new_user_session_path %>.
-        <% end %>
-      </div>
-
-      <hr class="dropdown-divider">
 
       <div class="card-content is-size-3 mb-4 has-text-weight-bold has-text-grey-dark">
         <span class="has-text-success">log4meal&nbsp;</span> is a simple application that allows you to log your meals with statistics by day.
