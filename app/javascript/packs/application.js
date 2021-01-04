@@ -1,5 +1,7 @@
 //= require jquery
 //= require jquery_ujs
+//= require turbolinks
+//= require_tree .
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"

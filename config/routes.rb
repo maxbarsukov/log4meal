@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  get 'about/index'
+  get 'about/', to: 'about#inswx'
   root to: 'about#index'
+  get 'archives/index'
 
   devise_for :users
-
-  get 'archives/index'
 
   resources :entries
 
