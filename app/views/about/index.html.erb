@@ -5,16 +5,20 @@
   <div class="column is-half">
     <nav class="panel is-success">
       <div class="panel-heading is-size-1 has-text-weight-bold mb-4 has-text-centered has-background-success has-text-grey-dark">
-        Hi!
-      </div>
-      <div class="panel-block has-text-weight-bold mb-4 has-text-grey-dark">
-        <span class="">log4meal&nbsp;</span> is a simple application that allows you to log your meals with statistics by day.
-      </div>
-
-      <div class="panel-block has-text-weight-bold mb-4 has-text-grey-dark">
+        Hi
         <% if current_user %>
-          You are logged in! You can view your entries
-          <%= link_to "Entries", entries_path, class: "button" %>
+          , <%= current_user.email %>
+        <% else %>
+        <% end %>!
+      </div>
+      <div class="card-content is-size-3 mb-4 has-text-weight-bold has-text-grey-dark">
+        <span class="has-text-success">log4meal&nbsp;</span> is a simple application that allows you to log your meals with statistics by day.
+      </div>
+      <hr class="dropdown-divider">
+      <div class="card-content is-size-3 mb-4 has-text-weight-bold has-text-grey-dark">
+        <% if current_user %>
+          You are logged in! You can view your entries<br>
+          <%= link_to "Entries", entries_path, class: "button is-success is-large mt-4 is-fullwidth" %>
         <% else %>
           To start using our service, you need to&nbsp;
           <%= link_to 'pass a simple registration', new_user_registration_path %>&nbsp;or&nbsp;
