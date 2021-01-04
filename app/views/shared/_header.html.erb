@@ -7,7 +7,7 @@
           <div class="navbar-item">
             <%= link_to root_path do %>
               <%= image_tag "logo.svg", alt: "logo" %>
-              <span class="has-text-weight-bold is-size-4 ml-4 has-text-success">log4meal</span>
+              <span class="has-text-weight-bold is-size-3 ml-4 has-text-success">log4meal</span>
             <% end %>
           </div>
         </div>
@@ -16,12 +16,12 @@
             <span class="navbar-item mt-1">
               <span class="is-size-2">
                 <% if user_signed_in? %>
-                  <%=link_to 'Create new entry', new_entry_path, class: 'button is-success' %>
+                  <%=link_to 'Create new entry', new_entry_path, class: 'button is-success is-medium' %>
                 <% end %>
 
                 <div class="dropdown is-hoverable">
                   <div class="dropdown-trigger">
-                    <button class="button is-success is-outlined is-inverted is-static" aria-controls="dropdown-menu">
+                    <button class="button is-success is-outlined is-inverted is-static is-medium" aria-controls="dropdown-menu">
                       <span>
                         <% if user_signed_in? %>
                           <%= current_user.email %>
