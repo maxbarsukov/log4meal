@@ -26,7 +26,6 @@ gem 'devise'
 gem 'cancancan'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-gem "rails_12factor", group: :production
 gem 'rake'
 
 group :development, :test do
