@@ -5,11 +5,10 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.all
-                    .where('user_id = ?', current_user.id)
+    @entries = Entry.where('user_id = ?', current_user.id)
                     .where('created_at >= ?', Date.today)
   end
-
+  s
   # GET /entries/1
   # GET /entries/1.json
   def show
@@ -66,6 +65,7 @@ class EntriesController < ApplicationController
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_entry
     @entry = Entry.find(params[:id])
