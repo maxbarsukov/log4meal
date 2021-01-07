@@ -8,7 +8,7 @@ class EntriesController < ApplicationController
     @entries = Entry.where('user_id = ?', current_user.id)
                     .where('created_at >= ?', Date.today)
   end
-  s
+
   # GET /entries/1
   # GET /entries/1.json
   def show
